@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserFindComponent } from './component/user-find/user-find.component'
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular-front-iuvity';
+
+  action : number = 0;
+
 }
