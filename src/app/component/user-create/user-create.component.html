@@ -1,1 +1,34 @@
-<p>user-create works!</p>
+<div>
+
+  <div>
+    <h2>Crear Usuario</h2>
+  </div>
+  <div>
+    <div>
+      <label for="imputName">Nombres:</label>
+      <input id="imputName" type="text" [(ngModel)]="dataUser.name" required>
+    </div>
+    <div>
+      <label for="imputLastName">Apellidos:</label>
+      <input id="imputLastName" type="text" [(ngModel)]="dataUser.lastName" required>
+    </div>
+    <div>
+      <label for="impuId">Identificacion:</label>
+      <input id="impuId" type="number" [(ngModel)]="dataUser.id" required>
+    </div>
+    <div>
+      <label for="impuAge">Edad:</label>
+      <input id="impuAge" type="number" [(ngModel)]="dataUser.age" required>
+    </div>
+    <div>
+      <label for="imputEmail">Correo electronico:</label>
+      <input id="imputEmail" type="email" [(ngModel)]="dataUser.email" required>
+    </div>
+    <div>
+      <label for="imputPhone">Numero de telefono:</label>
+      <input id="imputPhone" type="number" [(ngModel)]="dataUser.phone" required>
+    </div>
+
+    <button (click)="createUser()">Crear Usurio</button>
+  </div>
+</div>

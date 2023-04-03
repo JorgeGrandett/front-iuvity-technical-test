@@ -1,1 +1,13 @@
-<p>user-delete works!</p>
+<div>
+
+  <div>
+    <h2>Eliminar Usuario</h2>
+  </div>
+  <div>
+    <div>
+      <label for="inputText">Ingrese el ID del usuario a eliminar:</label>
+      <input id="inputText" type="number" [(ngModel)]="idToDelete">
+      <button (click)="deleteUser()">Eliminar</button>
+    </div>
+  </div>
+</div>

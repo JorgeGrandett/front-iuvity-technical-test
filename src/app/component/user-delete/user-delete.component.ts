@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { UserService } from '../../service/user.service';
 
 @Component({
   selector: 'app-user-delete',
@@ -7,4 +8,25 @@ import { Component } from '@angular/core';
 })
 export class UserDeleteComponent {
 
+  idToDelete: any;
+
+  constructor(
+    private userService: UserService,
+  ){}
+
+  deleteUser(){
+    if(!this.idToDelete) {
+      console.log("Ingrese un id valido");
+      return;
+    }
+    this.userService.deleteUser(this.idToDelete).subscribe((res: any) => {
+      console.log(res);
+      if(res.status == 200) {
+        console.log();
+      }
+      else {
+        console.log(res.error)
+      }
+    });
+  }
 }
